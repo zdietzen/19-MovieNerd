@@ -2,15 +2,15 @@ function MyViewModel()
 {
 	var self = this;
 	self.movies = ko.observableArray(); 
-	self.searchTitle = ko.observable();
+	self.searchTerm = ko.observable();
 
-	self.searchForMovies = function()
-	{
-		$.getJSON( "http://omdbapi.com/?s=" + self.searchTitle(),function( data )
-			{
-				ko.mapping.fromJS(data.search, {}, self.movies);
-			});
+	self.searchForMovie = function() {
+		$.getJSON("http://omdbapi.com/?s=" + self.searchTerm(),function(data) {
+			ko.mapping.fromJS(data.Search, {}, self.movies);
+		});
+		
 	};
-	
+
+
 };
 ko.applyBindings(new MyViewModel());

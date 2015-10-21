@@ -11,24 +11,23 @@
   </head>
 
   <h1 style="text-align:center;">Movie Nerd</h1>
-        <h5 style="text-align:center;">Find Flicks Fast!</h5>
- <body>
+        <h4 style="text-align:center;">Find Flicks Fast!</h4>
+ 
 
   <div class "container" style="margin-top:24px;">
 
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
+      <input type="text" class="form-control" placeholder="Search for a movie bro.." data-bind="value: searchTerm">
       <span class="input-group-btn">
-        <button class="btn btn-default" data-bind="click: searchForMovies">Search!</button>
+        <button class="btn btn-default:right" data-bind="click: searchForMovie">Search!</button>
       </span>
     </div><!-- /input-group -->
 
 <div style="height: 24px;"></div>
 
-<div class="alert alert-info" data-bind="visible: movies().length == 0">
-No Movies Found!
+  <div class="alert alert-info" data-bind="visible: movies().length == 0">
+No Movies Found
 </div>
-
 <div class="row" data-bind="visible: movies().length > 0, foreach: movies">
   <div class="col-sm-6 col-md-4">
     <div class="panel panel-default">
@@ -43,11 +42,10 @@ No Movies Found!
    </div>
   </div>
  </div>
-
 </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/knockout/dist/knockoutjs"></script>
+    <script src="bower_components/knockout/dist/knockout.js"></script>
     <script src="bower_components/knockout-mapping/knockout.mapping.js"></script>
     <script src="js/app.js"></script>
   </body>
