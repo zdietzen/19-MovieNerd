@@ -1,0 +1,9 @@
+.jumbotron{
+    background-image: url('http://pinkfloydarchives.com/Discog/Ukraine/VHS/Wall/tape.jpg');
+    color: white;
+    height: 380px;
+    width: auto;
+    background-repeat: 
+    background-size:contain;
+    background-position: center;
+}
